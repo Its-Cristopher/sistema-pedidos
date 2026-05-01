@@ -799,19 +799,57 @@ button {
 /* =========================================
    RESPONSIVE — MÓVIL
    ========================================= */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  /* Apilar el header en vertical */
   .header {
-    padding: 1rem 1rem 3rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem 4rem 1rem;
+    gap: 15px;
+  }
+
+  /* Centrar los textos y logo del header */
+  .header-titles {
+    width: 100%;
+    justify-content: center; 
+  }
+
+  /* Que la tarjeta de usuario se centre */
+  .header-right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .user-card {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .user-info {
+    max-width: 180px; 
+  }
+
+  /* Centrar las pestañas inferiores */
+  .mini-nav {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    justify-content: center;
+    gap: 2px;
   }
 
   .nav-btn {
-    padding: 6px 12px;
-    font-size: 0.78rem;
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    flex: 1; 
+    text-align: center;
   }
 
   .login-card {
     padding: 24px 18px;
-    margin: 20px auto;
+    margin: 10px auto;
   }
 
   .roles-grid {
@@ -827,14 +865,8 @@ button {
     gap: 0;
   }
 
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cocina-container {
-    grid-template-columns: 1fr;
-  }
-
+  .menu-grid,
+  .cocina-container,
   .admin-grid {
     grid-template-columns: 1fr;
   }
@@ -849,32 +881,23 @@ button {
     text-align: center;
   }
 
-  .user-info {
-    max-width: 130px;
-  }
   .historial-item {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .historial-total {
     align-self: flex-end;
   }
-}
 
-.usuario-avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.85rem;
-  flex-shrink: 0;
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-body {
+    padding: 15px;
+  }
 }
-
 /* =========================================
    LOGO EN HEADER
    ========================================= */
